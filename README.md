@@ -1,31 +1,52 @@
-# The Local LLM Crash Course - Build Your Own GPT in 2 hours!
-This is the courseware and Codespace for the [The Local LLM Crash Course - Build Your Own GPT in 2 hours](https://www.udemy.com/course/the-local-llm-crash-course-build-a-hugging-face-ai-chatbot/?referralCode=EAD6017AA0001257DD9A)! Have fun with the course and use the Q&A if you run into any issues!
+# Local LLM Chatbot
 
-# Course Resources
+A locally-running AI chatbot built with Chainlit and CTransformers. Chat with AI models directly in your browser, with all processing happening on your machine.
 
-### Codespaces Pricing and Free Credits
-https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces
+## Features
 
-### Hugging Face
-* The Orca Model's Model Card: https://huggingface.co/zoltanctoth/orca_mini_3B-GGUF
+- 🤖 Local LLM inference using CTransformers
+- 💬 Clean chat interface with Chainlit
+- 🔄 Conversational memory
+- 🔀 Switch between models (Orca Mini and Llama2)
+- ⚡ Streaming responses
+- 🔗 Optional LangChain integration
 
-###  Installing `ctransformers` and Chainlit
-Just for reference. Remember, you don't need to do this as it's pre-installed in your Codespace.
+## Quick Start
+
+1. Install dependencies:
+```bash
+pip install -r requirements.txt
 ```
-pip install ctransformers chainlit
+
+2. Run the chatbot:
+```bash
+chainlit run chat.py
 ```
 
-## The Open Orca Dataset
-The dataset on Hugging Face: https://huggingface.co/datasets/Open-Orca/OpenOrca
+3. Open your browser at `http://localhost:8000`
 
-## Chainlit and Streamlit
- * Chainlit: https://docs.chainlit.io/get-started/overview
- * Streamlit: https://streamlit.io/
+## Models
 
-## LangChain
+The app supports two models out of the box:
+- **Orca Mini 3B**: Default model, smaller and faster
+- **Llama 2**: Optional larger model with potentially better responses
 
-### Installation
-```
-pip install langchain langchain-community
+Models will be downloaded automatically on first use from Hugging Face.
+
+## Development
+
+This project includes a complete VS Code devcontainer configuration for easy development. Key tools:
+- Black formatter
+- Flake8 linter
+- MyPy type checking
+
+## Dependencies
+
+Key packages:
+- `ctransformers`: Local LLM inference
+- `chainlit`: Chat interface
+- `langchain` (optional): For advanced chains and memory
+
+See `requirements.txt` for full list.
 ```
 
