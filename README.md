@@ -36,16 +36,6 @@ The chatbot is implemented with the following key components:
 
 The system prompt instructs the AI to provide helpful, concise answers to user queries.
 
-## Project Structure
-
-```
-.
-├── chat.py           # Main chatbot implementation
-├── requirements.txt  # Python dependencies
-├── chainlit.md      # Chainlit configuration
-└── assets/          # Project assets
-```
-
 ## Development Environment
 
 The project includes comprehensive development environment setup:
@@ -66,6 +56,5 @@ Key packages:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
 ```
-
