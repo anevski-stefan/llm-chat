@@ -1,15 +1,15 @@
 # Local LLM Chatbot
 
-A locally-running AI chatbot built with Chainlit and CTransformers. Chat with AI models directly in your browser, with all processing happening on your machine.
+A locally-running AI chatbot built with Chainlit and CTransformers. This chatbot provides a clean web interface for interacting with local LLM models, with all processing happening on your machine.
 
 ## Features
 
 - 🤖 Local LLM inference using CTransformers
-- 💬 Clean chat interface with Chainlit
-- 🔄 Conversational memory
-- 🔀 Switch between models (Orca Mini and Llama2)
-- ⚡ Streaming responses
-- 🔗 Optional LangChain integration
+- 💬 Clean chat interface powered by Chainlit
+- 🔄 Conversation history tracking
+- 🎯 Focused responses with custom system prompt
+- ⚡ Real-time streaming responses
+- 🚀 Easy to deploy and use
 
 ## Quick Start
 
@@ -25,28 +25,47 @@ chainlit run chat.py
 
 3. Open your browser at `http://localhost:8000`
 
-## Models
+## Implementation Details
 
-The app supports two models out of the box:
-- **Orca Mini 3B**: Default model, smaller and faster
-- **Llama 2**: Optional larger model with potentially better responses
+The chatbot is implemented with the following key components:
 
-Models will be downloaded automatically on first use from Hugging Face.
+- **Model**: Uses the Orca Mini 3B model (quantized version) from Hugging Face
+- **Interface**: Chainlit for the web UI and chat functionality
+- **Memory**: Maintains conversation history for context-aware responses
+- **Streaming**: Real-time token streaming for responsive user experience
 
-## Development
+The system prompt instructs the AI to provide helpful, concise answers to user queries.
 
-This project includes a complete VS Code devcontainer configuration for easy development. Key tools:
-- Black formatter
-- Flake8 linter
-- MyPy type checking
+## Project Structure
+
+```
+.
+├── chat.py           # Main chatbot implementation
+├── requirements.txt  # Python dependencies
+├── chainlit.md      # Chainlit configuration
+└── assets/          # Project assets
+```
+
+## Development Environment
+
+The project includes comprehensive development environment setup:
+
+- VS Code devcontainer configuration
+- Code quality tools:
+  - Black formatter
+  - Flake8 linter
+  - MyPy type checking
+- Git configuration and ignore rules
 
 ## Dependencies
 
 Key packages:
-- `ctransformers`: Local LLM inference
-- `chainlit`: Chat interface
-- `langchain` (optional): For advanced chains and memory
+- `ctransformers`: For local LLM inference
+- `chainlit`: Web interface and chat functionality
+- Additional development dependencies in `requirements.txt`
 
-See `requirements.txt` for full list.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
